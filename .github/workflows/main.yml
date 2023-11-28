@@ -13,3 +13,8 @@ jobs:
         run: npm run build
       - name: setup finish
         run: echo "Alasss!"
+  test-app:
+    needs: build-app
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "DEPENDENT JOB"
